@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Danmaku" translatesAutoresizingMaskIntoConstraints="NO" id="S7X-cy-F6Z">
+                                <rect key="frame" x="0.0" y="20" width="375" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="RzC-5n-BDF"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2S-Dl-Wfb" customClass="DGDanMuView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="w60-vG-Zv4"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kwa-JV-Ld3">
+                                <rect key="frame" x="318" y="231" width="51" height="31"/>
+                                <connections>
+                                    <action selector="setUpDanMuHide:" destination="BYZ-38-t0r" eventType="valueChanged" id="lJz-Hd-pyo"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="S7X-cy-F6Z" secondAttribute="trailing" id="AnF-Ig-rLq"/>
+                            <constraint firstItem="S7X-cy-F6Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JvJ-eN-UqF"/>
+                            <constraint firstItem="u2S-Dl-Wfb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L2a-Ih-p5u"/>
+                            <constraint firstAttribute="trailing" secondItem="u2S-Dl-Wfb" secondAttribute="trailing" id="diM-kG-AKJ"/>
+                            <constraint firstItem="kwa-JV-Ld3" firstAttribute="trailing" secondItem="u2S-Dl-Wfb" secondAttribute="trailing" constant="-8" id="hLh-fj-p92"/>
+                            <constraint firstItem="u2S-Dl-Wfb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="p5f-gU-CnA"/>
+                            <constraint firstItem="kwa-JV-Ld3" firstAttribute="bottom" secondItem="u2S-Dl-Wfb" secondAttribute="bottom" constant="-8" id="sMj-MP-63H"/>
+                            <constraint firstItem="S7X-cy-F6Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zH3-j3-Rip"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="danMuView" destination="u2S-Dl-Wfb" id="Qkf-G2-JPi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Danmaku" width="320" height="200"/>
+    </resources>
+</document>
